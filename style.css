@@ -1,0 +1,46 @@
+* {
+    margin: auto;
+    align-items: center;
+}
+
+.header {
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%;
+    display: flex;
+    margin: auto;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Garamond";
+
+}
+
+.name {
+    font-size: x-large;
+    width: 65%;
+    position: relative;
+}
+
+.menu {
+    text-align: right;
+    font-size: large;
+    position: relative
+}
+
+.main {
+    text-align: center;
+    font-size: medium;
+    width: 75%;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact {
+    position: absolute;
+    bottom: 5px;
+    text-align: center;
+}
