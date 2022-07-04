@@ -1,46 +1,29 @@
 * {
     margin: auto;
-    align-items: center;
-}
-
-.header {
-    overflow: hidden;
-    position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
     width: 100%;
-    display: flex;
-    margin: auto;
-    height: 100px;
-    align-items: center;
-    justify-content: space-between;
-    font-family: "Garamond";
-
-}
-
-.name {
-    font-size: x-large;
-    width: 65%;
-    position: relative;
-}
-
-.menu {
-    text-align: right;
-    font-size: large;
-    position: relative
-}
-
-.main {
     text-align: center;
+    font-family: "Georgia";
+    width: 90%;
+}
+
+.header .name {
+    font-size: large;
+    margin-bottom: 2.5%;
+    margin-top: 5%;
+}
+
+.header .menu {
     font-size: medium;
-    width: 75%;
-    margin-top: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    color: inherit;
+}
+
+p {
+    font-size: medium;
 }
 
 .contact {
-    position: absolute;
-    bottom: 5px;
-    text-align: center;
+    bottom: 0;
 }
+
