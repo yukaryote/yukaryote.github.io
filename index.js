@@ -8,10 +8,10 @@ template.innerHTML = `
     <img src="images/transparent.png" alt="chubby kitty" style="width:75px;height:75px;">
 </div>
 <div class="menu">
-    <a href="/index.html">Home</a></li>
-    <a href="/art/art.html">Art</a></li>
-    <a href="/projects/projects.html">Projects</a></li>
-    <a href="/writing/writing.html">Writing</a></li>
+    <a href="index.html">Home</a></li>
+    <a href="art.html">Art</a></li>
+    <a href="projects.html">Projects</a></li>
+    <a href="writing.html">Writing</a></li>
 </div>
 </div>
 `;
