@@ -18,15 +18,22 @@
     margin-bottom: 2.5%;
     color: inherit;
     padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.header .menu a {
+    padding: 8px;
 }
 
 p {
     font-size: medium;
 }
 
-li {
+.stories li {
     text-align: left;
     font-size: medium;
+    padding: 2px;
 }
 
 .contact {
