@@ -24,6 +24,11 @@ p {
     font-size: medium;
 }
 
+li {
+    text-align: left;
+    font-size: medium;
+}
+
 .contact {
     bottom: 0;
 }
