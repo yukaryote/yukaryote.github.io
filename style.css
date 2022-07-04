@@ -36,7 +36,7 @@ p {
     padding: 2px;
 }
 
-.contact {
-    bottom: 0;
+.contact a {
+    padding: 4px;
 }
 
