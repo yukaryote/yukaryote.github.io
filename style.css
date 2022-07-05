@@ -6,6 +6,10 @@
     width: 90%;
 }
 
+a {
+    color: inherit;
+}
+
 .header .name {
     font-size: large;
     margin-bottom: 2.5%;
@@ -16,7 +20,6 @@
     font-size: medium;
     margin-top: 2.5%;
     margin-bottom: 2.5%;
-    color: inherit;
     padding: 10px;
     width: 100%;
     text-align: center;
@@ -24,10 +27,12 @@
 
 .header .menu a {
     padding: 8px;
+    color: palevioletred;
 }
 
 p {
     font-size: medium;
+    line-height: 1.4;
 }
 
 .stories li {
@@ -45,6 +50,10 @@ p {
     padding: 4px;
     width: auto;
     height: 200px;
+}
+
+.stories_text p {
+    text-align: left;
 }
 
 
