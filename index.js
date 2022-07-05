@@ -1,7 +1,7 @@
 const template = document.createElement('template');
 
 template.innerHTML = `
-<div class="header">
+<div class="header" id="top">
 <div class="name">
 
     <h1>Isabella Yu</h1>
