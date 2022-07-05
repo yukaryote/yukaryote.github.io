@@ -9,25 +9,30 @@
 a {
     color: inherit;
 }
+a:hover {
+    color: rgb(187, 0, 0);
+}
 
 .header .name {
-    font-size: large;
+    font-size: x-large;
     margin-bottom: 2.5%;
     margin-top: 5%;
 }
 
 .header .menu {
     font-size: medium;
-    margin-top: 2.5%;
-    margin-bottom: 2.5%;
-    padding: 10px;
-    width: 100%;
+    margin-bottom: 5%;
+    width: 50%;
     text-align: center;
+    border: 2px solid #c5a8a8;
+    background-color: antiquewhite;
+    line-height: 1.4;
 }
 
 .header .menu a {
     padding: 8px;
-    color: palevioletred;
+    color: rgb(201, 80, 120);
+    text-decoration: none;
 }
 
 p {
@@ -43,6 +48,10 @@ p {
 
 .contact a {
     padding: 4px;
+}
+
+.main .projects {
+    width: 70%;
 }
 
 .main .projects img {

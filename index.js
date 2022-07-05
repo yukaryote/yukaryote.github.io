@@ -5,7 +5,7 @@ template.innerHTML = `
 <div class="name">
 
     <h1>Isabella Yu</h1>
-    <img src="images/transparent.png" alt="chubby kitty" style="width:75px;height:75px;">
+    <img src="images/transparent.png" alt="chubby kitty" style="width:100px;height:auto;">
 </div>
 <div class="menu">
     <a href="index.html">Home</a></li>
