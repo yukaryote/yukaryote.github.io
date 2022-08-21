@@ -1,43 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8">
-<title>Isabella Yu | Art</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="keywords" content="Isabella Yu,yukaryote,robots,MIT"/>
-<link rel="stylesheet" href="style.css">
-<script src="index.js" type="text/javascript" defer></script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NF796KCJ07"></script>
-<script>
+<head>
+  <meta charset="UTF-8">
+  <title>Isabella Yu | Home</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="keywords" content="Isabella Yu,yukaryote,robots,MIT"/>
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js" type="text/javascript" defer></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NF796KCJ07"></script>
+  <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-NF796KCJ07');
-
-  const container = document.querySelector(".container");
-  const preview = document.querySelector(".prev");
-  const active = document.querySelectorAll(".thumb");
-  
-  container.addEventListener("click", function (e) {
-    if (e.target.className == "thumb") {
-      preview.src = e.target.src;
-      preview.classList.add("effect");
-  
-      setTimeout(function () {
-        preview.classList.remove("effect");
-      }, 100);
-  
-      active.forEach(function (thumb) {
-        if (thumb.classList.contains("active")) {
-          thumb.classList.remove("active");
-        }
-      });
-  
-      e.target.classList.add("active");
-    }
-  });
-</script>
+  </script>
+</head>
 
 <body>
 
