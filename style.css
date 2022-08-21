@@ -27,6 +27,7 @@ a:hover {
     border: 2px solid #c5a8a8;
     background-color: antiquewhite;
     line-height: 1.4;
+    word-wrap: break-word;
 }
 
 .header .menu a {
@@ -50,19 +51,6 @@ p {
     padding: 4px;
 }
 
-/*
-.main .projects {
-    width: 70%;
-}
-
-.main .projects img {
-    float: none;
-    padding: 4px;
-    width: auto;
-    height: 200px;
-}
-*/
-
 .main .things p {
     text-align: left;
 }
@@ -77,7 +65,7 @@ p {
 
 .courses {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .courses .semester {
