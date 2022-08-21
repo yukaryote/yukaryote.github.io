@@ -74,7 +74,7 @@ p {
     border: 2px solid #c5a8a8;
     background-color: antiquewhite;
     line-height: 1.4;
-    flex: 1;
+    flex: 0;
 }
 
 .courses .semester li {
