@@ -50,6 +50,7 @@ p {
     padding: 4px;
 }
 
+/*
 .main .projects {
     width: 70%;
 }
@@ -60,9 +61,93 @@ p {
     width: auto;
     height: 200px;
 }
+*/
+
+.main .things p {
+    text-align: left;
+}
+
+.main .things li {
+    text-align: left;
+}
 
 .stories_text p {
     text-align: left;
 }
 
+.courses {
+    display: flex;
+    align-items: flex-start;
+}
 
+.courses .semester {
+    margin: 5px;
+    width: 270px;
+    border: 2px solid #c5a8a8;
+    background-color: antiquewhite;
+    line-height: 1.4;
+    flex: 1;
+}
+
+.courses .semester li {
+    font-size: small;
+    text-align: left;
+}
+
+.courses .year {
+    margin: 1%;
+    width: 500px;
+    text-align: center;
+    border: 2px solid #810000;
+    background-color: rgb(210, 141, 141);
+    line-height: 1.4;
+}
+
+#gallery {
+    line-height:0;
+    -webkit-column-count:5; /* split it into 5 columns */
+    -webkit-column-gap:5px; /* give it a 5px gap between columns */
+    -moz-column-count:5;
+    -moz-column-gap:5px;
+    column-count:3;
+    column-gap:5px;
+ }
+
+ #gallery img {
+    width: 100% !important;
+    height: auto !important;
+    margin-bottom:5px; /* to match column gap */
+ }
+
+ 
+ @media (max-width: 1200px) {
+    #gallery {
+     -moz-column-count:    4;
+     -webkit-column-count: 4;
+     column-count:         4;
+    }
+ }
+
+ @media (max-width: 1000px) {
+    #gallery {
+     -moz-column-count:    3;
+     -webkit-column-count: 3;
+     column-count:         3;
+    }
+ }
+
+ @media (max-width: 800px) {
+    #gallery {
+     -moz-column-count:    2;
+     -webkit-column-count: 2;
+     column-count:         2;
+    }
+ }
+
+ @media (max-width: 400px) {
+    #gallery {
+     -moz-column-count:    1;
+     -webkit-column-count: 1;
+     column-count:         1;
+    }
+ }
