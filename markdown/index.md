@@ -1,0 +1,5 @@
+Hello there! I'm Isabella, a senior at MIT majoring in EECS and math (6-2 and 18) at MIT. I'm broadly interested in embodied intelligence, and I would like to someday have a robotic companion who can do my chores. To this end, I'm currently doing an internship at EPFL's VILAB on creating task-specific, differentiable robot morphologies. In the past, I've done research/internships at MIT and the Lawrence Livermore National Laboratory on tactile navigation, vision-based drone navigation, and autonomous cars. 
+
+I also like computer graphics, art, animation, and film; I may often be found [creating visual art](https://yukaryote.github.io/art.html), [taking photos](https://www.flickr.com/photos/195177486@N08/), or [writing] (https://yukaryote.github.io/writing.html).
+
+Feel free to email me at iyu [at] mit [dot] edu and/or click these links: [LinkedIn]("https://www.linkedin.com/in/isabella-yu-7ba69114a/") [GitHub]("https://github.com/yukaryote") [Twitter]("https://twitter.com/yukary0t3")

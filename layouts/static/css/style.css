@@ -1,0 +1,135 @@
+body {
+	background-size:cover;
+	background-attachment: fixed;
+    background-color: antiquewhite;
+    color: #28282a;
+    font-family: 'helvetica', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+	padding-top:0px;
+	overflow-x:hidden;
+    word-wrap: break-word;
+    line-height:170%;
+	position: relative;
+	overflow-x: hidden;
+}
+
+a {
+    color:#14588a;
+    text-decoration: none;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+}
+
+a:hover{
+    color:#48b0b6;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+}
+
+h1{
+    font-size: 36px;
+    margin:0px;
+    font-family: 'Work Sans', sans-serif;
+	font-weight:400;
+}
+
+h2{
+    font-size: 24px;
+    margin:0px;
+    font-family: 'Work Sans', sans-serif;
+	font-weight:400;
+}
+
+h3{
+    font-size: 18px;
+    margin-top:15px;
+    font-family: 'IBM Plex Sans', sans-serif;
+	font-weight:500;
+}
+
+#bkg{
+	position:fixed;
+	top:0%;
+	width:100%;
+	height:100%;
+	z-index:-999999;
+	background-size: cover;
+    background-color: antiquewhite;
+}
+
+#navbar{
+	position:fixed;
+    top:5%;
+	left:15%;
+  	width: 70%;
+    font-family:'Work Sans', sans-serif;
+    font-size:20px;
+    text-align:left;
+    padding-top:0px;
+    text-transform:lowercase;
+    padding-top:0px;
+    padding-bottom:1px;
+    border-bottom:1px solid transparent;
+	z-index:999999;
+}
+
+#pagehead{
+	position:absolute;
+	top: 15%;
+	left: 15%;
+	width: 70%;
+	/*height: 10%;
+	height: -webkit-fit-content;
+	height: -moz-fit-content;*/
+	/*z-index:999999;*/
+}
+
+#content{
+	position:absolute;
+	top: 20%;
+	left: 15%;
+	width: 70%;
+	/*height: 70%;
+	height: -webkit-fit-content;
+	height: -moz-fit-content;*/
+	z-index:99;
+}
+
+#container{
+	position:relative;
+	min-height: 100%;
+	width: 100%;
+}
+
+#expand {
+    color:#14588a;
+    text-decoration: none;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+}
+
+#expand:hover{
+    color:#48b0b6;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+	cursor:pointer
+}
+
+ul {
+	list-style-type: square;
+}
