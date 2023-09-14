@@ -64,13 +64,13 @@ p {
 }
 
 .courses {
-    display: flex;
-    align-items: center;
+    text-align: left;
+    align-items: left;
 }
 
 .courses .semester {
     margin: 5px;
-    width: 270px;
+    width: 400px;
     border: 2px solid #c5a8a8;
     background-color: antiquewhite;
     line-height: 1.4;
