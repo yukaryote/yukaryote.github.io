@@ -9,7 +9,6 @@ template.innerHTML = `
 </div>
 <div class="menu">
     <a href="index.html">Home</a></li>
-    <a href="academics.html">School stuff</a></li>
     <a href="projects.html">Projects </a></li>
     <a href="art.html">Art</a></li>
     <a href="writing.html">Writing</a></li>
