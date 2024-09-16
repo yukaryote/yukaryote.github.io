@@ -2,13 +2,11 @@
 layout: page
 title: homemade telecaster
 description: making an electric guitar from scratch
-img: assets/img/guitar/guitar_front.JPG
+img: assets/img/guitar/guitar_front.jpg
 importance: 1
 category: art
 related_publications: false
 ---
-
-A homemade telecaster: sick tunes, some bonework, and a motherload of sanding
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -62,7 +60,7 @@ While I waited for the glue to seal overnight, I worked on the neck. This was by
         {% include figure.liquid loading="eager" path="assets/img/guitar/neck_frets.JPG" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/guitar/telectaster_neck.JPG" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/guitar/telecaster_neck.JPG" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
@@ -131,7 +129,7 @@ I put in the electronics following the schematic below, then laser cut a custom 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/guitar/circuit.GIF" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/guitar/cirtcuit.GIF" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/guitar/electronics_on.JPG" class="img-fluid rounded z-depth-1" %}
