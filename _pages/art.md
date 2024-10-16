@@ -1,11 +1,11 @@
 ---
 layout: page
-title: projects
-permalink: /projects/
-description: A growing collection of your cool projects.
+title: art
+permalink: /art/
+description: art gallery
 nav: true
-nav_order: 1
-display_categories: [work, fun, art]
+nav_order: 4
+display_categories: [comics, film/animation, illustration]
 horizontal: false
 ---
 
