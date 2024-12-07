@@ -16,6 +16,6 @@ show_papers: true
 social: false # includes social icons at the bottom of the page
 ---
 
-Hello there. I'm Isabella, a Masters student at MIT working with Vincent Sitzmann in the Scene Representation Group. I'm interested in computer vision, robotics, and computational design.
+Hello there. I'm Isabella, a Masters student at MIT working with Vincent Sitzmann in the Scene Representation Group. I'm interested in perception-for-robotics and computational cognitive science.
 
 [CV](/assets/pdf/Isabella_Yu_CV.pdf) / [Google Scholar](https://scholar.google.com/citations?user=QsGGSlQAAAAJ&hl=en) / [Twitter](x.com/yukary0t3) / [GitHub](https://github.com/yukaryote) / [LinkedIn](https://www.linkedin.com/in/yukaryote)

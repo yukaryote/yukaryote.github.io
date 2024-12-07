@@ -8,10 +8,8 @@ category: art
 related_publications: false
 ---
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/guitar/guitar_front.jpg" class="img-fluid rounded z-depth-1" width="50%"%}
-    </div>
+<div class="row justify-content-sm-center">
+    {% include figure.liquid loading="eager" path="assets/img/guitar/guitar_front.jpg" class="img-fluid rounded z-depth-1" width="50%"%}
 </div>    
 
 NOTE: this is not a tutorial on how to make a guitar! I did some pretty jank things with the limited tools I had. Please do proper research if you decide to get into luthiery.
