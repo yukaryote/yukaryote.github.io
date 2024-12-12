@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Stable diffusion style transfer
-description: how easy is it to finetune Stable Diffusion on my portfolio?
+description: how easy is it to finetune Stable Diffusion on my portfolio? (spoiler, scarily easy)
 img: assets/img/sd.png
 importance: 1
 category: art

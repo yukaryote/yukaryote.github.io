@@ -2,12 +2,15 @@
 layout: page
 title: art
 permalink: /art/
-description: I like to draw and make comics. I've also dabbled in animation and filmmaking, directing two films for MIT admissions. Page under construction.
+description:
 nav: true
 nav_order: 4
 display_categories: [comics, illustrations]
 horizontal: false
 ---
+I like to draw and make comics. I've also dabbled in animation and filmmaking, directing two films for MIT admissions. All works shown were created without the use of generative AI.
+
+[Artstation](https://www.artstation.com/yukaryote) / [Instagram](https://www.instagram.com/isbla.rt)
 
 <!-- pages/projects.md -->
 <div class="projects">

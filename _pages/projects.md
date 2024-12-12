@@ -2,12 +2,13 @@
 layout: page
 title: projects
 permalink: /projects/
-description: some technical projects I've worked on for research, for courses, and just for fun. Page under construction.
+description:
 nav: true
 nav_order: 1
 display_categories: [work, fun, art]
 horizontal: false
 ---
+some technical projects I've worked on for research, for courses, and just for fun. Page under construction.
 
 {% assign sorted_projects = site.projects | sort: "importance" %}
 
