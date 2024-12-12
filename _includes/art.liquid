@@ -1,18 +1,25 @@
 <div class="col">
-  <a href="{% if project.redirect %}{% if project.redirect contains '://' %}{{ project.redirect}}{% else %}{{ project.redirect | relative_url }}{% endif %}{% else %}{{ project.url | relative_url }}{% endif %}">
   {% if project.redirect %}
-    {% assign zoom = false %}
+    <a href="{% if project.redirect %}{% if project.redirect contains '://' %}{{ project.redirect}}{% else %}{{ project.redirect | relative_url }}{% endif %}{% else %}{{ project.url | relative_url }}{% endif %}">
+    {%
+      include figure.liquid
+      loading="eager"
+      path=project.img
+      sizes = "250px"
+      alt="thumbnail"
+      zoomable=false
+      class="preview"
+    %}
+    </a>
   {% else %}
-    {% assign zoom = true %}
+    {%
+      include figure.liquid
+      loading="eager"
+      path=project.img
+      sizes = "250px"
+      alt="thumbnail"
+      zoomable=true
+      class="preview"
+    %}
   {% endif %}
-  {%
-    include figure.liquid
-    loading="eager"
-    path=project.img
-    sizes = "250px"
-    alt="thumbnail"
-    zoomable=zoom
-    class="preview"
-  %}
-  </a>
 </div>
