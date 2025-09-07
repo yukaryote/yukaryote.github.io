@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to make your brain into earrings - Isabella Yu</title>
+    <meta name="description" content="a.k.a. proof that I'm a self-replicating Turing Machine">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="icon" href="../assets/img/transparent.png">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+                <li><a href="../art.html">Art</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>How to make your brain into earrings</h1>
+
+        <div class="project-content">
+            <img src="../assets/img/brain/finished_brain.jpg" alt="Brain earrings" style="width: 50%; margin: 0 auto; display: block;">
+            <br>
+            <small style="text-align: center;">DISCLAIMER: Please do not use this procedure for medical diagnosis /srs</small>
+            <p>In spring 2023, I signed up for one of <a href="https://www.evlab.mit.edu">Ev Fedorenko's</a> fMRI studies to receive a $75 Amazon gift card. However, upon hearing from my wonderful friend Sneve (who is a PhD student at Harvard neuro) that you could ask for your fMRI brain files after the study, I didn't care about the gift card anymore. I had other plans >:)</p>
+            <p>The fMRI itself was actually quite difficult to complete. I had to keep my head completely still for 2 hours while sporadically solving word puzzles, and I was fighting the urge to doze off the entire time. I'm not sure if my sleepiness was detectable in the fMRI, but the researchers administering the test assured me that my results would still be useful. In the end, I got a DropBox folder of my fMRI scan images, which made it all worth it. It was time to get to work.</p>
+            <img src="../assets/img/brain/brain.gif" alt="gif of my brain">
+            <div style="text-align: center;">
+                <small>The researchers sent me a GIF of my brain, too :)</small>
+            </div>
+            <p>Thankfully, the Internet is teeming with resources from people who had 3D printed their brains before. I followed <a href="https://www.youtube.com/watch?v=k1WIpwV-8lE">this tutorial</a> to get an STL file of my brain from the DICOM fMRI images. I used 3DSlicer with the SwissSkullStripper(?? what a name) extension to segment out my brain from my skull, then stack the brain segments together into a 3D file. You can also print various parts of your head by segmenting out the appropriate organ, e.g. your skull, but that could be a project for another day.</p>
+            <p>If you want to see what my entire head looks like in 3DSlicer, click the spoiler below at your own risk (CW: what appears to be the flesh of a freshly-minted zombie).</p>
+            <button id="toggle-head-btn" type="button" style="display: block; margin: 1em auto; font-family: monospace; font-size: 11pt;">Show</button>
+            <img id="head-image" src="../assets/img/brain/head.png" alt="whole head" style="display: none; margin: 1em auto;">
+            <script>
+                const btn = document.getElementById('toggle-head-btn');
+                const img = document.getElementById('head-image');
+                btn.addEventListener('click', function() {
+                    if (img.style.display === 'none') {
+                        img.style.display = 'block';
+                        btn.textContent = 'Hide';
+                    } else {
+                        img.style.display = 'none';
+                        btn.textContent = 'Show';
+                    }
+                });
+            </script>
+            <p>I then used Blender to clean up the 3D model--removing small disconnected components, Laplacian smoothing, etc. I also used a Bezier curve to split my brain into hemispheres; the cleavage between my left and right hemispheres wasn't a straight line, with my left hemisphere being slightly larger than my right. The cleavage line is also rotated a bit relative to the centerline of my body. <a href="https://en.wikipedia.org/wiki/Brain_asymmetry">According to Wikipedia, this is typical:</a> "The human brain has an overall leftward posterior and rightward anterior asymmetry (or brain torque)."</p>
+            <img src="../assets/img/brain/brain_blend_top.png" alt="top view of brain in Blender">
+            <p>Through this process, I also learned that the back of my brain is really fucking smooth. It's probably a segmentation issue, but it's funnier to imagine that my visual cortex has simply not caught up with the rest of human evolution. I'm happy to report that my prefrontal cortex is sufficiently wrinkled, though.</p>
+            <img src="../assets/img/brain/brain_blend_side.png" alt="side view of brain in Blender">
+            <p>Next, I made a PLA test print on an Ultimaker 3. Unfortunately, I was literally too big-brained for the buildplate, so I had to print just the left side of my brain at 80% of its true size. I honestly didn't like the result with the Ultimaker; there were way too many supports that I had to painstakingly remove, and the bottom of the print flaked off easily. SLA would yield better results on those fronts, but it would cost a lot more... unless I made the model really small. Like the size of an earring...</p>
+            <p>For a while, I kind of lost interest in making the print better-looking, and my 3D-printed left hemisphere sat on my desk for a year. However, right before graduating, I experienced a renewed sense of vigor: I was going to make these damn earrings before I left MIT and lost my makerspace privileges. Thus, I set off to The Deep (one of MIT's makerspaces) to use their Formlabs SLA printers. With help from the wonderful mentor Seth, I was able to produce a pair of tiny brainlets made out of medical resin, printed with a 25-micron layer height.             I also printed impossible hearts from our SIGGRAPH paper <a href="https://anadodik.github.io/publication/meschers">Meschers!</a></p>
+
+            <div class="project-gallery">
+                <img src="../assets/img/brain/brain_sla.jpg" alt="brain print with supports">
+                <img src="../assets/img/brain/brain_heart_sla.jpg" alt="brain print with supports removed">
+                <img src="../assets/img/brain/brain_heart_sla_2.jpg" alt="brain print with supports removed" style="max-height: 180px; width:auto;">
+            </div>
+            <div style="text-align: center;">
+                <small>Left to right: the brain right out of the printer, brain and heart prints, brain and heart prints with support removed.</small>
+            </div>
+
+            <p>Next, I spraypainted the prints with a bright, somewhat flesh-colored pink. To do this, I hung them from a cardboard box using some string and tacks, then gradually applied about 3 coats of paint before finishing off with a glossy finish. While they were drying, I made some earring hooks out of paper clips.</p>
+
+            <div class="project-gallery">
+                <img src="../assets/img/brain/spraypaint_brain.jpg">
+                <img src="../assets/img/brain/finished_all.jpg">
+            </div>
+
+            <p>Here's what they look like as jewelry :) I gave the brain earrings to Sneve and the heart earrings to my amazing UROP mentor Ana Dodik.</p>
+            <div class="project-gallery">
+                <img src="../assets/img/brain/finished_brain.jpg">
+                <img src="../assets/img/brain/finished_heart.jpg">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; Isabella Yu, 2025</p>
+    </footer>
+</body>
