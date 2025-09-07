@@ -206,30 +206,39 @@ class ScrapbookGallery {
         let hasDragged = false;
         let startX, startY, initialX, initialY;
 
-        img.addEventListener('mousedown', (e) => {
+        // Helper function to get coordinates from mouse or touch event
+        const getEventCoords = (e) => {
+            if (e.touches && e.touches.length > 0) {
+                return { x: e.touches[0].clientX, y: e.touches[0].clientY };
+            }
+            return { x: e.clientX, y: e.clientY };
+        };
+
+        // Mouse events
+        const handleStart = (e) => {
             isDragging = true;
             hasDragged = false;
-            img.style.zIndex = '1001'; // Bring to front while dragging
+            img.style.zIndex = '1001';
             
-            startX = e.clientX;
-            startY = e.clientY;
+            const coords = getEventCoords(e);
+            startX = coords.x;
+            startY = coords.y;
             
-            // Get current position
             const rect = img.getBoundingClientRect();
             const containerRect = this.container.getBoundingClientRect();
             initialX = rect.left - containerRect.left;
             initialY = rect.top - containerRect.top;
             
             e.preventDefault();
-        });
+        };
 
-        document.addEventListener('mousemove', (e) => {
+        const handleMove = (e) => {
             if (!isDragging) return;
             
-            const deltaX = e.clientX - startX;
-            const deltaY = e.clientY - startY;
+            const coords = getEventCoords(e);
+            const deltaX = coords.x - startX;
+            const deltaY = coords.y - startY;
             
-            // Only start dragging if mouse moved more than 5 pixels
             if (Math.abs(deltaX) > 5 || Math.abs(deltaY) > 5) {
                 if (!hasDragged) {
                     hasDragged = true;
@@ -241,7 +250,6 @@ class ScrapbookGallery {
                 const newX = initialX + deltaX;
                 const newY = initialY + deltaY;
                 
-                // Keep image within container bounds
                 const maxX = this.width - imageData.width;
                 const maxY = this.height - imageData.height;
                 
@@ -251,26 +259,37 @@ class ScrapbookGallery {
                 img.style.left = clampedX + 'px';
                 img.style.top = clampedY + 'px';
             }
-        });
+        };
 
-        document.addEventListener('mouseup', () => {
+        const handleEnd = () => {
             if (isDragging) {
                 isDragging = false;
                 img.style.cursor = 'grab';
-                img.style.zIndex = imageData.zIndex; // Return to original z-index
+                img.style.zIndex = imageData.zIndex;
                 
                 if (hasDragged) {
-                    // Update the image data with new position
                     const rect = img.getBoundingClientRect();
                     const containerRect = this.container.getBoundingClientRect();
                     imageData.x = rect.left - containerRect.left;
                     imageData.y = rect.top - containerRect.top;
                 } else {
-                    // If no drag occurred, treat as click for lightbox
                     this.showLightbox(imageData.src);
                 }
             }
-        });
+        };
+
+        // Add both mouse and touch event listeners
+        img.addEventListener('mousedown', handleStart);
+        img.addEventListener('touchstart', handleStart, { passive: false });
+        
+        document.addEventListener('mousemove', handleMove);
+        document.addEventListener('touchmove', handleMove, { passive: false });
+        
+        document.addEventListener('mouseup', handleEnd);
+        document.addEventListener('touchend', handleEnd);
+        
+        // Prevent context menu on long press (mobile)
+        img.addEventListener('contextmenu', (e) => e.preventDefault());
     }
 
     showLightbox(src) {
