@@ -22,7 +22,7 @@
 /* Pelican Basic Theme CSS */
 body {
     font-family: monospace;
-    font-size: 11px;
+    font-size: 14px;
     color: var(--text-color);
     background-color: var(--bg-color);
     width: 80%;
@@ -79,7 +79,7 @@ nav a {
     border-radius: 4px;
     padding: 8px 12px;
     font-family: monospace;
-    font-size: 11px;
+    font-size: 16px;
     cursor: pointer;
     z-index: 1000;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -97,11 +97,11 @@ nav a {
 }
 
 .about .bio {
-    max-width: 500px;
+    max-width: 700px;
 }
 
 .profile {
-    max-width: 150px;
+    max-width: 225px;
     flex-shrink: 0;
 }
 
@@ -127,8 +127,8 @@ nav a {
 
 .publication img {
     float: left;
-    width: 75px;
-    height: 75px;
+    width: 112px;
+    height: 112px;
     object-fit: cover;
     margin-right: 1em;
 }
@@ -140,8 +140,8 @@ nav a {
 /* Project and Art Grids */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 0.5em;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 0.2em;
     margin-top: 1em;
 }
 
@@ -152,7 +152,7 @@ nav a {
 .comics-grid .tile img {
     width: 100%;
     height: auto;
-    min-height: 250px;
+    min-height: 375px;
     object-fit: contain;
     margin-bottom: 0.5em;
 }
@@ -169,14 +169,14 @@ nav a {
 
 .tile img {
     width: 100%;
-    max-height: 150px;
+    max-height: 225px;
     object-fit: cover;
     margin-bottom: 0.5em;
 }
 
 .tile h3 {
     margin: 0.5em 0;
-    font-size: 1.1em;
+    font-size: 1.5em;
 }
 
 /* Art categories */
@@ -198,18 +198,23 @@ iframe {
 }
 
 /* Project pages */
+.project-content {
+    width: 70%;
+    margin: 0 auto;
+}
+
 .project-content img {
     margin: auto;
     display: block;
-    max-width: 250px;
-    width: 100%;
+    max-width: 375px;
+    width: 75%;
     height: auto;
 }
 
 .project-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1em;
+    gap: 0.3em;
     margin: 1em 0;
 }
 
@@ -234,7 +239,7 @@ iframe {
     .profile {
         float: none;
         margin: 0 auto 1em;
-        max-width: 150px;
+        max-width: 300px;
     }
     
     .grid {
@@ -255,8 +260,8 @@ iframe {
     }
     
     .publication img {
-        width: 80px;
-        height: 60px;
+        width: 120px;
+        height: 90px;
     }
     
     .theme-toggle {

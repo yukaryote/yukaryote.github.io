@@ -336,10 +336,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Get images dynamically and initialize gallery
     getIllustrationImages().then(imageSources => {
         const gallery = new ScrapbookGallery(container, {
-            width: 800,
-            height: 600,
-            minSize: 80,
-            maxSize: 140,
+            width: 1000,
+            height: 800,
+            minSize: 120,
+            maxSize: 210,
             maxRotation: 10,
             overlap: 0
         });
