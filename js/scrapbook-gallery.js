@@ -186,31 +186,91 @@ class ScrapbookGallery {
                 width: ${image.width}px;
                 height: ${image.height}px;
                 object-fit: cover;
-                cursor: pointer;
+                cursor: grab;
                 transform: rotate(${image.rotation}deg);
                 z-index: ${image.zIndex};
                 box-shadow: none;
+                user-select: none;
             `;
             
-            // Add hover effect for interactivity (instant, no animation)
-            img.addEventListener('mouseenter', () => {
-                img.style.transform = `rotate(${image.rotation}deg) scale(1.1)`;
-                img.style.boxShadow = 'none';
-                img.style.zIndex = '1000';
-            });
-            
-            img.addEventListener('mouseleave', () => {
-                img.style.transform = `rotate(${image.rotation}deg) scale(1)`;
-                img.style.boxShadow = 'none';
-                img.style.zIndex = image.zIndex;
-            });
-            
-            // Add lightbox click handler
-            img.addEventListener('click', () => this.showLightbox(image.src));
+            // Add drag functionality
+            this.makeDraggable(img, image);
             this.container.appendChild(img);
         });
         
         console.log('Scrapbook gallery rendered');
+    }
+
+    makeDraggable(img, imageData) {
+        let isDragging = false;
+        let hasDragged = false;
+        let startX, startY, initialX, initialY;
+
+        img.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            hasDragged = false;
+            img.style.zIndex = '1001'; // Bring to front while dragging
+            
+            startX = e.clientX;
+            startY = e.clientY;
+            
+            // Get current position
+            const rect = img.getBoundingClientRect();
+            const containerRect = this.container.getBoundingClientRect();
+            initialX = rect.left - containerRect.left;
+            initialY = rect.top - containerRect.top;
+            
+            e.preventDefault();
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            
+            const deltaX = e.clientX - startX;
+            const deltaY = e.clientY - startY;
+            
+            // Only start dragging if mouse moved more than 5 pixels
+            if (Math.abs(deltaX) > 5 || Math.abs(deltaY) > 5) {
+                if (!hasDragged) {
+                    hasDragged = true;
+                    img.style.cursor = 'grabbing';
+                }
+                
+                e.preventDefault();
+                
+                const newX = initialX + deltaX;
+                const newY = initialY + deltaY;
+                
+                // Keep image within container bounds
+                const maxX = this.width - imageData.width;
+                const maxY = this.height - imageData.height;
+                
+                const clampedX = Math.max(0, Math.min(maxX, newX));
+                const clampedY = Math.max(0, Math.min(maxY, newY));
+                
+                img.style.left = clampedX + 'px';
+                img.style.top = clampedY + 'px';
+            }
+        });
+
+        document.addEventListener('mouseup', () => {
+            if (isDragging) {
+                isDragging = false;
+                img.style.cursor = 'grab';
+                img.style.zIndex = imageData.zIndex; // Return to original z-index
+                
+                if (hasDragged) {
+                    // Update the image data with new position
+                    const rect = img.getBoundingClientRect();
+                    const containerRect = this.container.getBoundingClientRect();
+                    imageData.x = rect.left - containerRect.left;
+                    imageData.y = rect.top - containerRect.top;
+                } else {
+                    // If no drag occurred, treat as click for lightbox
+                    this.showLightbox(imageData.src);
+                }
+            }
+        });
     }
 
     showLightbox(src) {
@@ -292,8 +352,6 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
     }
 
-    // Dynamically get all image file paths in assets/img/illustrations
-
     // Function to dynamically fetch illustration images from the directory
     async function getIllustrationImages() {
         try {
@@ -336,7 +394,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Get images dynamically and initialize gallery
     getIllustrationImages().then(imageSources => {
         const gallery = new ScrapbookGallery(container, {
-            width: 1000,
+            width: 1100,
             height: 800,
             minSize: 120,
             maxSize: 210,
