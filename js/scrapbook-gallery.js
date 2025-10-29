@@ -423,7 +423,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Initialize gallery
         gallery.init(imageSources);
-        
+
         // Optional: Add double-click to reshuffle
         container.addEventListener('dblclick', () => {
             gallery.reshuffle();

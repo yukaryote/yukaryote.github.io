@@ -33,22 +33,25 @@ class BibtexParser {
     }
 
     static renderPublication(pub) {
-        const previewImg = pub.preview ? 
+        const previewImg = pub.preview ?
             `<img src="assets/img/publication_preview/${pub.preview}" alt="${pub.title}">` : '';
-        
+
         const links = [];
         if (pub.html) links.push(`<a href="${pub.html}">Project page</a>`);
         if (pub.arxiv) links.push(`<a href="${pub.arxiv}">arXiv</a>`);
         if (pub.pdf) links.push(`<a href="assets/pdf/${pub.pdf}">PDF</a>`);
-        
+
         const linkString = links.length > 0 ? `<br>${links.join(' | ')}` : '';
+
+        // Convert asterisks to superscripts in author names
+        const authorFormatted = pub.author ? pub.author.replace(/\*/g, '<sup>*</sup>') : '';
 
         return `
             <div class="publication">
                 ${previewImg}
                 <div class="publication-content">
                     <strong>${pub.title}</strong><br>
-                    <em>${pub.author}</em><br>
+                    <em>${authorFormatted}</em><br>
                     ${pub.journal}, ${pub.year}${linkString}
                 </div>
             </div>
