@@ -217,7 +217,19 @@ iframe {
     gap: 0.3em;
     margin: 1em 0;
 }
+/* Blog posts */
+.blog-post {
+    width: 70%;
+    margin: 0 auto;
+}
 
+.blog-post img {
+    margin: auto;
+    display: block;
+    max-width: 375px;
+    width: 75%;
+    height: auto;
+}
 /* Contact icons */
 .contact-icons {
     margin-top: 1em;
