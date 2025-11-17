@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machines of loving grace</title>
+    <meta name="description" content="Machines of loving grace">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="icon" href="../assets/img/transparent.png">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+                <li><a href="../art.html">Art</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="blog-post">
+            <div class="blog-teaser">
+                <img src="../assets/img/illustrations/machines.jpg" alt="Machines of Loving Grace" style="width: 50%; margin: 0 auto; display: block;">
+            </div>
+            <h1>Machines of Loving Grace</h1>
+            <div class="post-date">
+                <h4>November 16, 2025</h4>
+            </div>
+            <p><em>An explorer from a distant utopia visits the ruins of a mass surveillance state, where a discontinued guard bot lays in deserted castle grounds. The explorer naively follows the instructions on the robot&#39;s body, unwittingly triggering an emergent behavior--one it learned by watching the world around it grow kinder over the ages.</em></p>
+            <p>After my Clip Studio Paint trial expired, I found myself back in the desolate landscape called &quot;Procreate&#39;s non-perceptual color mixing and file management system&quot;.<sup><a href="#fn-1" id="fnref-1">1</a></sup> Rather than eat the cost of the perpetual license (100% chance of getting CSP), I entered this illustration into the 45th Clip Studio Paint contest with the hopes of winning one of the prizes, which include free, multi-year licenses for CSP (&lt;1% chance of getting CSP).</p>
+            <hr>
+            <p>The theme this time is &quot;smile&quot;. Looking through past iterations of the contest, I knew CSP tended to award cheerful, bright submissions with positive messages. Thus, an obvious corollary is &quot;positive things that make you smile&quot;, but I felt like this constrained me to a few mundane or overly niche subjects (having a camera pointed at me with my consent, kittens, hanging out with my friends, the loss curve going down on wandb). So I took a step back and tried to fundamentally understand what a smile is in the first place. </p>
+            <ul>
+            <li>I wrote down some words I associated with smiles: <em>happy, mischievous, comforting, devious, schadenfreude, infant smiling instinct, love, acting</em><ul>
+            <li>Newborn babies smile instinctively at their mothers without even knowing what their face looks like. I learned this from Alison Gopnik&#39;s <em>The Scientist in the Crib</em>, highly recommend.</li>
+            </ul>
+            </li>
+            <li>We and some apes are the only animals (I think) that smile to convey some sort of emotion. Except in chimps, a smile signifies danger.</li>
+            <li>I mainly associate smiles with cameras and mirrors, which don&#39;t necessarily have an emotional response attached. In those cases, a smile is more utilitarian. You smile at the camera to fulfill social expectations. You smile at the mirror to see what you look like when you smile. 
+            The last point--smiling for its own sake instead of in response to something--made me reminisce about Alyosha&#39;s lab meeting earlier that day. Konpat, our neighborhood representation learning expert, was talking about how he tried to set up a camera to simply watch the environment around it and see if it could learn a predictive model of the world without overt supervision. So I wondered if a security camera or robot that idly watched the world pass by would be able to know what a smile meant.</li>
+            </ul>
+            <p>I think this concept is especially ironic because people seem to hate those passive aggressive &quot;Smile! You&#39;re on camera&quot; signs and would probably refuse to smile at them out of spite. Yet, in a kinder world, maybe we would attribute such messages to genuine goodwill instead of sarcasm. In Dario Amodei&#39;s essay &quot;Machines of loving grace,&quot; he describes how AI can bring about a utopian world without disease and poverty. Would such a world look back on the present like this wide-eyed explorer?</p>
+            <h4 id="all-watched-over-by-machines-of-loving-grace">All Watched Over by Machines of Loving Grace</h4>
+            <p>by Richard Brautigan</p>
+            <p><em>I like to think (and</em><br><em>the sooner the better!)</em><br><em>of a cybernetic meadow</em><br><em>where mammals and computers</em><br><em>live together in mutually</em><br><em>programming harmony</em><br><em>like pure water</em><br><em>touching clear sky.</em>   </p>
+            <p><em>I like to think</em><br><em>(right now, please!)</em><br><em>of a cybernetic forest</em><br><em>filled with pines and electronics</em><br><em>where deer stroll peacefully</em><br><em>past computers</em><br><em>as if they were flowers</em><br><em>with spinning blossoms.</em>   </p>
+            <p><em>I like to think</em><br><em>(it has to be!)</em><br><em>of a cybernetic ecology</em><br><em>where we are free of our labors</em><br><em>and joined back to nature,</em><br><em>returned to our mammal</em><br><em>brothers and sisters,</em><br><em>and all watched over</em><br><em>by machines of loving grace.</em></p>
+            <p>Some scattered technical rendering thoughts:</p>
+            <ul>
+            <li>One thing that bugs me is that it&#39;s hard to tell it&#39;s a robot unless you squint. This is because the mirror-style lens on some security cameras isn&#39;t something you commonly find on robots, and the shoulders aren&#39;t super well defined. I wanted the &quot;eye&quot; of the robot to be reflective such that the explorer is visible, so that inclined me towards this decision. In the future, maybe I&#39;d make the robot&#39;s head itself a highly reflective metallic material.</li>
+            <li>Finding a good composition and camera angle with a mirror gave me severe choice paralysis. When you&#39;re drawing a mirror reflection along with its backdrop, you essentially make two drawings: the background and the reflection. In other words, there are O(n^2) different ways to draw this kind of composition, although the image in your reflection is weakly determined by your background. I had some other invariants that constrained the optimization:<ul>
+            <li>Robot has to have a reflective camera/mirror</li>
+            <li>Reflection has to depict intrepid smiling explorer</li>
+            <li>Robot must be facing explorer and giving explorer a flower or otherwise visibly acknowledging the explorer&#39;s smile in a positive way</li>
+            <li>&quot;Smile! You&#39;re on camera&quot; sign must be visible, with a smile emoji and security camera emoji for clarity
+            </li>
+            </ul>
+            </li>
+            <li>With some finagling, I narrowed the composition down to two possible clusters: explorer&#39;s backside + explorer&#39;s reflection facing camera, or just the explorer&#39;s reflection facing camera. I chose the latter because the former might get a bit too busy and the smile wouldn&#39;t be as visible, and if you showed the whole robot body stooping down to face the explorer, it looked kind of intimidating. I think I could definitely make the former perspective work, but it was a day before the contest deadline and I didn&#39;t even have a finalized sketch, so I had to make a choice.</li>
+            <div class="project-gallery">
+                <img src="../assets/img/machines/sketches_1.jpg" alt="sketches" style="width: 60%; margin: 1em auto;">
+                <img src="../assets/img/machines/sketches_1.jpg" alt="sketches" style="width: 60%; margin: 1em auto;">
+            </div>
+            <li>I even made a Blender scene for this to explore different camera angles, the first time I&#39;ve done so for a drawing. Mirrors are hard! It confirmed the explorer-only angle as superior.
+            Next, I angled the mirror downwards a bit to make it seem more like a POV with a tall robot and tilted the POV to add some dynamic movement. I also struggled with making the background. I knew I wanted to emphasize the subject in the mirror in some way, so I sought to make perspective lines converge there. This led to first a sharp corner of a wall, then the curved wall and arch that you see right now. The blue sky on either side of the robot and the windows bring your eyes closer to the center.</li>
+            <div class="project-gallery">
+                <img src="../assets/img/machines/blender_1.png" alt="blender scene" style="width: 60%; margin: 1em auto;">
+                <img src="../assets/img/machines/blender_2.png" alt="blender scene" style="width: 60%; margin: 1em auto;">
+            </div>
+            <li>I also had so many choices on the background behind the explorer too. I tried foggy valley, grassland, and desert before settling on a simple continuation of the wall behind the robot, which gave the scene a nice continuity. Occam&#39;s razor works wonders.</li>
+            <li>The rendering was so hard because I had like zero direct references and fisheye perspective is challenging; I just went for it. I had inspirations like Alariko&#39;s drawings and images of traffic mirror selfies on the internet, but other than that I was going in blind. For the wall, I collected images of castle archer towers and Roman aqueducts. For the clouds and golden hour shading, I looked at Alariko&#39;s work. The explorer is somewhat inspired by young Carl from <em>Up</em>. The poppy is a nod to Minecraft and <em>Castle in the Sky</em>.</li>
+            <div class="project-gallery">
+                <img src="../assets/img/machines/golem.png" alt="minecraft golem" style="width: 60%; margin: 1em auto;">
+                <img src="../assets/img/machines/carl.png" alt="young Carl from Up" style="width: 60%; margin: 1em auto;">
+                <img src="../assets/img/machines/castle-in-the-sky-castle.gif" alt="castle in the sky" style="width: 60%; margin: 1em auto;">
+            </div>
+            <li>A thought flitted through my mind when I was drawing the crenellations, and I think I wrote it down in the most pretentious way possible: there&#39;s an old English castle on the countryside that has been battered by wind, war, and time. The crenellations at the top of the archer tower used to resemble a perfect square wave, but harsh conditions have almost applied a Butterworth-like filter on them. Is there a differential equation that can model the smoothing effect of these conditions on a square wave?</li>
+            <div class="project-gallery">
+                <img src="../assets/img/machines/crenellation.png" alt="castle crenellations" style="width: 60%; margin: 1em auto;">
+                <img src="../assets/img/machines/butterworth.png" alt="butterworth filter" style="width: 60%; margin: 1em auto;">
+            </div>
+            <li>It was so hard to place the clouds. I started with black ones to signal a storm, but that didn&#39;t contrast well with the wall. So I switched to white clouds, which gave the drawing a beach-y vibe. The 4-winged gulls in the sky are actually dinosaurs.</li>
+            </ul>
+            <section class="footnotes">
+                <ol>
+                    <li id="fn-1">
+                        CSP offers perceptual mixing, a more realistic color mixing algorithm, a godsend for traditionally-inclined artists like myself.
+                        <a href="#fnref-1" aria-label="Return to content">↩</a>
+                    </li>
+                </ol>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; Isabella Yu, 2025</p>
+    </footer>
+</body>
+</html>
