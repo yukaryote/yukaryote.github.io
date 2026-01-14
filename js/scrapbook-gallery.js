@@ -2,8 +2,8 @@
 class ScrapbookGallery {
     constructor(container, options = {}) {
         this.container = container;
-        this.width = options.width || 800;
-        this.height = options.height || 300;
+        this.width = options.width || 1000;
+        this.height = options.height || 400;
         this.minSize = options.minSize || 80;
         this.maxSize = options.maxSize || 140;
         this.maxRotation = options.maxRotation || 7;
