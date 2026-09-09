@@ -179,6 +179,26 @@ nav a {
     font-size: 1.5em;
 }
 
+/* Container forces the correct tile height */
+.rotated-box {
+    width: 100%;
+    height: 225px; /* Matches your .tile img max-height */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5em; /* Matches your original img margin */
+}
+
+/* Specific sizing for the image inside the container */
+.rotated-box img {
+    /* We swap width and height because 90deg rotation flips them */
+    height: 100% !important; 
+    width: 225px !important; 
+    object-fit: cover;
+    transform: rotate(90deg);
+}
+
 /* Art categories */
 .category {
     margin-top: 2em;
