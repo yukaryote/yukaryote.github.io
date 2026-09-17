@@ -162,6 +162,54 @@ nav a {
     margin-top: 1em;
 }
 
+/* Justified rows of equal height; flex-grow on each .illo is set to its aspect ratio */
+.illo-row {
+    display: flex;
+    gap: 3px; /* keep in sync with GAP in js/illustration-gallery.js */
+    margin-bottom: 3px;
+}
+
+.illo {
+    display: block;
+    min-width: 0;
+    flex-basis: 0;
+    overflow: hidden;
+}
+
+.illo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* rows are sized to the images, so nothing is cropped */
+    transition: opacity 0.2s ease;
+}
+
+.illo:hover img {
+    opacity: 0.8;
+}
+
+.illo-status {
+    text-align: center;
+    padding: 3em 0;
+}
+
+.illo-lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    cursor: pointer;
+}
+
+.illo-lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
 .tile {
     text-align: center;
     text-decoration: none;

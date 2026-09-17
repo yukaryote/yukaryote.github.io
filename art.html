@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,10 +29,11 @@
         <p><a href="https://www.artstation.com/yukaryote" target="_blank">Artstation</a> / <a href="https://www.instagram.com/isbla.rt" target="_blank">Instagram</a></p>
         
         <section>
-            <h2 class="category">illustrations (drag them! click them!)</h2>
-            <div class="illustrations-grid">
-                <!-- images arranged randomly, kinda nonoverlapping -->
-            </div>
+            <h2 class="category">illustrations (click them!)</h2>
+            <!-- Every image in assets/img/illustrations/ shows up automatically, sorted dark to light.
+                 Jekyll (GitHub Pages) fills in this list at build time; the "---" lines at the top of the file enable that. -->
+            <script type="application/json" id="illustration-manifest">{%- assign illustrations = site.static_files | where_exp: "f", "f.path contains '/assets/img/illustrations/'" -%}{{ illustrations | map: "path" | jsonify }}</script>
+            <div class="illustrations-grid"></div>
         </section>
 
         <section>
@@ -69,31 +72,7 @@
         <p>&copy; Isabella Yu, 2025</p>
     </footer>
 
-    <script>
-        // Define illustration images for scrapbook gallery (fallback for GitHub Pages)
-        window.illustrationImages = [
-            'assets/img/illustrations/anticupid.png',
-            'assets/img/illustrations/boston.png',
-            'assets/img/illustrations/bubblegum.png',
-            'assets/img/illustrations/dragonfly.png',
-            'assets/img/illustrations/dumpy.jpg',
-            'assets/img/illustrations/endgames.jpg',
-            'assets/img/illustrations/foosh.png',
-            'assets/img/illustrations/jojo.png',
-            'assets/img/illustrations/lovecraftian.png',
-            'assets/img/illustrations/machines.jpg',
-            'assets/img/illustrations/mass_ave.jpg',
-            'assets/img/illustrations/panic_recursion.png',
-            'assets/img/illustrations/penn.png',
-            'assets/img/illustrations/sally.png',
-            'assets/img/illustrations/endgames_cover_v3.jpg',
-            'assets/img/illustrations/sonora.JPG',
-            'assets/img/illustrations/broccoli_tree.JPG',
-            'assets/img/illustrations/heaven.jpg',
-            'assets/img/illustrations/endgames_back.jpg',
-        ];
-    </script>
     <script src="js/gallery.js"></script>
-    <script src="js/scrapbook-gallery.js"></script>
+    <script src="js/illustration-gallery.js"></script>
 </body>
 </html>
